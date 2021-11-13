@@ -39,10 +39,10 @@ const Login = () => {
             <Typography sx={{ fontWeight: 500, m: 2,mb:5,mt:5, color: '#053361' }} variant="h3" component="div">
                 PLEASE LOGIN
                 </Typography>
-    <Box onSubmit={handleUSerLogin} sx={{ flexGrow: 1,mt:5 }}>
+    <Box  sx={{ flexGrow: 1,mt:5 }}>
       <Grid container spacing={2}>
         <Grid item lg={12} sm={12}>
-         <form action="">
+          <form onSubmit={handleUSerLogin} action="">
          <TextField
         //   required
           id="outlined-required"
@@ -75,6 +75,7 @@ const Login = () => {
                  <br/>
                  <br/>
                  <Button sx={{mb:5,backgroundColor:'#053361'}} onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+         
         </Grid>
        
       </Grid>

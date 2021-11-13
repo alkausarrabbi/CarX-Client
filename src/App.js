@@ -8,6 +8,7 @@ import AuthProvider from './Context/AuthProvider';
 import BookNow from './Components/BookNow/BookNow';
 import Dashboard from './Components/DashBoard/DashBoard/Dashboard';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import NotFound from './Components/Shared/NotFound/NotFound';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
        </Route>
        <Route exact path="/register">
         <Register></Register>
+       </Route>
+       <Route path="*">
+        <NotFound></NotFound>
        </Route>
      </Switch>
      </Router>

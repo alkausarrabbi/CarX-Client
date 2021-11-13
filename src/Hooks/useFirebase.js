@@ -51,7 +51,7 @@ const signInWithGoogle = (location, history) => {
             const user = result.user;
             saveUser(user.email, user.displayName,'PUT');
             setAuthError('');
-            const destination = location?.state?.from || '/';
+            const destination = location?.state?.from || '/dashboard';
             history.replace(destination);
         }).catch((error) => {
             setAuthError(error.message);
@@ -64,7 +64,7 @@ const loginUser=(email,password,history,location)=>{
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    const destination = location?.state?.from || '/';
+    const destination = location?.state?.from || '/dashboard';
     history.replace(destination);
     setAuthError('')})
   .catch((error) => {setAuthError(error.message)})
